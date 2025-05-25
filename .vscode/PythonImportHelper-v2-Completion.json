@@ -1,0 +1,20 @@
+[
+    {
+        "label": "qrcode",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "qrcode",
+        "description": "qrcode",
+        "detail": "qrcode",
+        "documentation": {}
+    },
+    {
+        "label": "generate_qr_code",
+        "kind": 2,
+        "importPath": "QR_code_project.qrcode_generator",
+        "description": "QR_code_project.qrcode_generator",
+        "peekOfCode": "def generate_qr_code(filepath):\n    with open(filepath, \"r\") as file:\n        lines = file.readlines()  \n    text = lines[0].strip()\n    filename = lines[1].strip()\n    # Convert text or url to QR_code\n    image_qrcode = qrcode.make(text)  # Create a QR code image\n    # Save the QR code image\n    image_qrcode.save(filename)  # Save the image in the project folder\n# Generate the QR code from input.txt",
+        "detail": "QR_code_project.qrcode_generator",
+        "documentation": {}
+    }
+]

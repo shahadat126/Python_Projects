@@ -1,0 +1,2 @@
+https://sk124.pythonanywhere.com/
+qrcode_generator.png
