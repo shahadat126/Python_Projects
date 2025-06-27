@@ -1,11 +1,92 @@
 [
     {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "qrcode",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "qrcode",
         "description": "qrcode",
         "detail": "qrcode",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "kind": 6,
+        "importPath": "Contact_Management_System.Contact_Manage_sys",
+        "description": "Contact_Management_System.Contact_Manage_sys",
+        "peekOfCode": "class Contact:\n    def __init__(self, name, phone, email, address):\n        self.name = name\n        self.phone = phone\n        self.email = email\n        self.address = address\n    def to_list(self):\n        return [self.name, self.phone, self.email, self.address]\nclass ContactBook:\n    def __init__(self, filename='contacts.csv'):",
+        "detail": "Contact_Management_System.Contact_Manage_sys",
+        "documentation": {}
+    },
+    {
+        "label": "ContactBook",
+        "kind": 6,
+        "importPath": "Contact_Management_System.Contact_Manage_sys",
+        "description": "Contact_Management_System.Contact_Manage_sys",
+        "peekOfCode": "class ContactBook:\n    def __init__(self, filename='contacts.csv'):\n        self.filename = filename\n        self.contacts = []\n        self.load_contacts()\n    def load_contacts(self):\n        print(\"Loading contacts from contacts.csv...\", end=\"\")\n        if os.path.exists(self.filename):\n            with open(self.filename, 'r', newline='') as file:\n                reader = csv.reader(file)",
+        "detail": "Contact_Management_System.Contact_Manage_sys",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Contact_Management_System.Contact_Manage_sys",
+        "description": "Contact_Management_System.Contact_Manage_sys",
+        "peekOfCode": "def main():\n    print(\"Welcome to the Contact Book CLI System!\\n\")\n    contact_book = ContactBook()\n    while True:\n        print(\"\"\"\n=========== MENU ===========\n1. Add Contact\n2. View Contacts\n3. Search Contact\n4. Remove Contact",
+        "detail": "Contact_Management_System.Contact_Manage_sys",
+        "documentation": {}
+    },
+    {
+        "label": "CurrencyConverte",
+        "kind": 6,
+        "importPath": "Currency_Converter.Shahadat_currency_converter",
+        "description": "Currency_Converter.Shahadat_currency_converter",
+        "peekOfCode": "class CurrencyConverter :\n    exchange_rates = {\n        \"USD\" : 1.0,\n        \"BD\"  : 121.00,\n        \"EURO\": 0.88,\n        \"GBP\" : 0.75\n    }\n    def __init__(self,amount,from_currency,to_currency):\n        self.amount = amount\n        self.from_currency = from_currency.upper()",
+        "detail": "Currency_Converter.Shahadat_currency_converter",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "kind": 6,
+        "importPath": "Currency_Converter.Shahadat_currency_converter",
+        "description": "Currency_Converter.Shahadat_currency_converter",
+        "peekOfCode": "class Logger:\n    def log(self, user, amount, result):\n        result=converter.convert()\n        from_curr=converter.from_currency\n        to_curr = converter.to_currency\n        print(f\"[LOG] User: {user} | Currency Amount: {amount} {from_curr} | Converted Amount: {result} {to_curr}\")\nif __name__ == \"__main__\" :\n    CurrencyConverter.update_rate(\"BD\",130)\n    amount = float(input(\"Enter amount: \"))\n    from_curr = input(\"Enter  your currency: \")",
+        "detail": "Currency_Converter.Shahadat_currency_converter",
+        "documentation": {}
+    },
+    {
+        "label": "CurrencyConverter",
+        "kind": 6,
+        "importPath": "Currency_Converter.temporary",
+        "description": "Currency_Converter.temporary",
+        "peekOfCode": "class CurrencyConverter:\n    # ক্লাস অ্যাট্রিবিউট: এক্সচেঞ্জ রেট সংরক্ষণ করা হচ্ছে একটি ডিকশনারিতে\n    exchange_rates = {\n        'USD': 1.0,       # Base currency\n        'EUR': 0.85,\n        'GBP': 0.75,\n        'BDT': 109.5,\n        'INR': 83.2\n    }\n    def __init__(self, amount, from_currency, to_currency):",
+        "detail": "Currency_Converter.temporary",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "kind": 6,
+        "importPath": "Currency_Converter.temporary",
+        "description": "Currency_Converter.temporary",
+        "peekOfCode": "class Logger:\n    def log(self, user, amount, result):\n        # সহজভাবে কনসোলে লগ দেখানো হচ্ছে\n        print(f\"[LOG] User: {user} | Amount: {amount} | Converted Amount: {result}\")\n# ব্যবহার উদাহরণ\nif __name__ == \"__main__\":\n    amount= float(input(\"Enter amount: \"))\n    from_currency= input(\"Enter your currency\")\n    to_currency= input(\"Enter your currency\")\n    logger = Logger()",
+        "detail": "Currency_Converter.temporary",
         "documentation": {}
     },
     {

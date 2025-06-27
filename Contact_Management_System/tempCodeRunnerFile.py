@@ -1,0 +1,1 @@
+with open(self.filename, 'r', newline='') as file
