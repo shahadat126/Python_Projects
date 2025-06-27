@@ -1,4 +1,4 @@
-# CurrencyConverter ক্লাস তৈরি করা হয়েছে যা মুদ্রা রূপান্তরের কাজ করে
+# CurrencyConverter ক্লাস  যা মুদ্রা রূপান্তরের কাজ করে
 class CurrencyConverter:
     # ক্লাস অ্যাট্রিবিউট: এক্সচেঞ্জ রেট সংরক্ষণ করা হচ্ছে একটি ডিকশনারিতে
     exchange_rates = {
